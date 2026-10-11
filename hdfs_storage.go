@@ -4,8 +4,7 @@ import (
 	"context"
 
 	s3_storage "github.com/storage-lock/go-s3-storage"
-	"github.com/storage-lock/go-storage"
-)
+	)
 
 // HdfsStorage hdfs对象存储实现 (S3兼容)
 type HdfsStorage struct {
@@ -26,6 +25,4 @@ func (x *HdfsStorage) GetName() string {
 	return StorageName
 }
 
-func (x *HdfsStorage) Capabilities() []storage.StorageCapability {
-	return x.S3Storage.Capabilities()
-}
+// Capabilities 声明存储支持的能力
